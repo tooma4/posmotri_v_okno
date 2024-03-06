@@ -51,11 +51,9 @@ ol {
   list-style: none;
 }
 
-button:focus {
-  outline: none;
+fieldset {
+  border: none;
 }
-
-/* Main */
 
 .content {
   display: flex;
@@ -64,16 +62,7 @@ button:focus {
   gap: 30px;
 }
 
-/* Main */
-
-/* Section result */
-
-fieldset {
-  border: 0 none;
-}
-
 .result {
-  height: 456px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -110,27 +99,24 @@ fieldset {
 }
 
 .search-form__textfield {
-  width: 225px;
+  min-width: 225px;
   appearance: none;
   background-color: transparent;
   border: 0;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 22px;
   letter-spacing: 0em;
   text-align: left;
   color: #fff;
+  cursor: text;
 }
 
 .search-form__textfield:focus {
   outline: none;
-}
-
-.search-form__textfield:focus-visible {
-  outline: 1px solid white;
 }
 
 .search-form__textfield::placeholder {
@@ -139,7 +125,6 @@ fieldset {
 
 .search-form__checkbox-list {
   display: flex;
-
   gap: 15px;
 }
 
@@ -173,21 +158,21 @@ fieldset {
   padding-left: 5px;
 }
 
-.search-form__label-text:hover {
+.search-form__label:hover .search-form__label-text {
   text-decoration: underline;
   cursor: pointer;
 }
 
 .search-form__submit-button {
   width: 194px;
-  height: 34px;
 }
 
 .button {
+  height: 34px;
   background-color: transparent;
   border: 0;
   border: 1px solid #fff;
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 22px;
@@ -214,9 +199,10 @@ fieldset {
   outline-offset: 1px;
 }
 
-/* Section result */
-
-/* Section content__details */
+.more-button {
+  width: 399px;
+  margin: 2px;
+}
 
 .content__details {
   width: 399px;
@@ -228,7 +214,7 @@ fieldset {
 }
 
 .title {
-  font-family: "Oswald";
+  font-family: "Oswald", sans-serif;
   font-size: 75px;
   font-weight: 700;
   line-height: 70px;
@@ -244,16 +230,10 @@ fieldset {
 
 .content__list {
   position: relative;
-  width: 399px;
-  height: 298px;
+  width: 100%;
+  height: 100%;
   overflow: hidden scroll;
 }
-
-/* Section content__details */
-
-/* template */
-
-/* cards */
 
 .content__list-item:not(:last-of-type) {
   padding-bottom: 30px;
@@ -266,9 +246,13 @@ fieldset {
   margin: 2px;
 }
 
-.content__card-link:has(.content__video-card-thumbnail:hover) {
+.content__card-link:hover {
   text-decoration: underline;
   text-underline-offset: 5px;
+}
+
+.content__card-link:active {
+  background-color: #545050;
 }
 
 .content__card-link:focus {
@@ -277,10 +261,6 @@ fieldset {
 
 .content__card-link:focus-visible {
   outline: 1px solid #fff;
-}
-
-.content__card-link_current:active {
-  background-color: #545050;
 }
 
 .content__card-link_current {
@@ -294,7 +274,7 @@ fieldset {
 }
 
 .content__video-card-title {
-  font-family: "Oswald";
+  font-family: "Oswald", sans-serif;
   font-size: 30px;
   font-weight: 700;
   line-height: 30px;
@@ -305,7 +285,7 @@ fieldset {
 }
 
 .content__video-card-description {
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 16px;
@@ -316,14 +296,5 @@ fieldset {
 .content__video-card-thumbnail {
   width: 194px;
   height: 103px;
+  object-fit: cover;
 }
-
-.more-button {
-  width: 399px;
-  height: 34px;
-  margin: 2px;
-}
-
-/* cards */
-
-/* template */
