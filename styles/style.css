@@ -170,7 +170,6 @@ fieldset {
 .button {
   height: 34px;
   background-color: transparent;
-  border: 0;
   border: 1px solid #fff;
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
@@ -200,7 +199,7 @@ fieldset {
 }
 
 .more-button {
-  width: 399px;
+  width: 395px;
   margin: 2px;
 }
 
